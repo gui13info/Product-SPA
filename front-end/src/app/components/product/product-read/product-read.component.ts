@@ -11,10 +11,10 @@ export class ProductReadComponent implements OnInit {
 
   products: Product[] = []
 
-  constructor(private produtoService: ProductService) { }
+  constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
-    this.produtoService.read().subscribe(dados => {
+    this.productService.read().subscribe(dados => {
       this.products = dados
     })
   }
